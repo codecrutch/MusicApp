@@ -1,0 +1,17 @@
+<h1><%= @album.name %></h1>
+<a href="<%= band_url(@album.band) %>"><%= @album.band.name %></a>
+<br>
+<a href="<%= new_album_track_url(@album) %>">Add track</a>
+<br>
+
+<% if @album.tracks.any? %>
+  <h2>Tracks</h2>
+  <table>
+    <tr>Title</tr>
+    <% @album.tracks.each do |song| %>
+      <tr><td><%= song.name %></td><tr>
+    <% end %>
+  </table>
+<% else %>
+  <h2>No Songs</h2>
+<% end %>
