@@ -1,4 +1,4 @@
-<h1>Create User</h1>
+<h1>New user</h1>
 
 <form action="<%= users_url %>" method="post">
   <%= auth_token %>
@@ -7,9 +7,9 @@
   </label>
   <br>
   <label for="">Password
-    <input type="text" name="user[password]" value="">
+    <input id='password' type="text" name="user[password]" value="">
   </label>
   <br>
 
-  <input type="submit" value="Sign up">
+  <input type="submit" value="Create User">
 </form>
